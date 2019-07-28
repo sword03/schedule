@@ -62,7 +62,7 @@ class TaskMgr:
 
     def _cron(self):
         for task in self.list_task:
-            if self._at_the_moment(self.update_time) or not task.flag:
+            if self._at_the_moment() or not task.flag:
                 task.run()
 
     def start(self, run_immedately=True):
